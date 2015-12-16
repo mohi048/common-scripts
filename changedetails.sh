@@ -20,7 +20,7 @@ echo "New Machine Name = $NewHostName"
 echo "Setting Root Login permission to $RootLogin"
 echo "Rebooting the machine , Please standBy !!!!!"
 echo "################ USE THE NEW IP ADDRESS $NewIpAddr TO LOGIN ###############"
-shutdown -r
+reboot
 
 
 
