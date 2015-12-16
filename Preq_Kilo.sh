@@ -24,6 +24,7 @@ echo "###############################################"
 if grep -q "ifconfig" /etc/rc.local; then
         echo "------------- i m skipping addition to rc.local file ....."
 else
+        printf '$i\nsleep 10\n.\nwq\n' | ex - /etc/rc.local
         printf '$i\nifconfig eth0 0\n.\nwq\n' | ex - /etc/rc.local
         printf '$i\nifconfig br-int up\n.\nwq\n' | ex - /etc/rc.local
         printf '$i\nifconfig br-ex '$eth' netmask 255.255.255.0 up\n.\nwq\n' | ex - /etc/rc.local
