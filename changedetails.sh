@@ -13,6 +13,7 @@ sed -i "s/$THISHOST/$NewHostName/g" /etc/hosts
 sed -i "s/$THISHOST/$NewHostName/g" /etc/hostname
 sed -i "s/$ThisIP/$NewIpAddr/g" /etc/network/interfaces
 sed -i "/PermitRootLogin/c\PermitRootLogin Yes"  /etc/ssh/sshd_config
+apt-get -y install git
 
 echo "New IP Address = $NewIpAddr"
 echo "New Machine Name = $NewHostName"
