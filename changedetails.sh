@@ -2,7 +2,7 @@
 ### General Scripts for UBUNTU OS to change Hostname , IP Address and SSH Root login Permissions ###
 
 
-NewHostName=""
+NewHostName="NewServer"
 NewIpAddr="192.168.72.130"
 RootLogin="Yes"
 
@@ -19,7 +19,7 @@ echo "New Machine Name = $NewHostName"
 echo "Setting Root Login permission to $RootLogin"
 echo "Rebooting the machine , Please standBy !!!!!"
 echo "################ USE THE NEW IP ADDRESS $NewIpAddr TO LOGIN ###############"
-shutdown -r +1
+shutdown -r
 
 
 
